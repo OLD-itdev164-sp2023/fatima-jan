@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
           <Link to={edge.node.slug}>{edge.node.title}</Link>
           <div>
           <GatsbyImage
-          image={edge.node.heroImage.gatsbyImageData}
+          image={edge.node.heroImage.gatsbyImageData} alt={``}
           />
           </div>
           <div>
