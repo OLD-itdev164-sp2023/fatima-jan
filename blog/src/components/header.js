@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Outer = styled.header`
-  background: rebeccapurple;
+  background: ${props => props.theme.header.backgroundColor};
   margin-bottom: 1.45rem;
   margin: 0 auto;
   padding: var(--space-4) var(--size-gutter);
@@ -27,15 +27,15 @@ const StyledLink = styled(Link)`
 
 const Header = ({ siteTitle }) => (
   <Outer>
-  <H1>
-  <StyledLink to="/">
-  {siteTitle}
-  </StyledLink>
-  </H1>
+    <H1>
+      <StyledLink to="/">
+       {siteTitle}
+      </StyledLink>
+    </H1>
   </Outer>
 )
 
-Header.PropTypes = {
+Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
